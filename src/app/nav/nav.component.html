@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><mat-icon color="primary" padding="right">menu</mat-icon></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"><mat-icon color="primary" padding="right">home</mat-icon>Home</a>
+      <a mat-list-item href="#"><mat-icon color="primary">assignment</mat-icon>Interviews</a>
+      <a mat-list-item href="#"><mat-icon color="primary">bookmark</mat-icon>Favourite</a>
+      <a mat-list-item href="#"><mat-icon color="primary">add_a_photo</mat-icon>Events</a>
+      <a mat-list-item href="#"><mat-icon color="primary">assignment_in</mat-icon>Resumes</a>
+      <a mat-list-item ><mat-icon color="primary" (click)="gotopage()">favorite</mat-icon>Interns</a>
+      <a mat-list-item href="#"><mat-icon color="primary">bookmark</mat-icon>Favourite</a>
+      <img src="../assets/icons/99xt.jpg" style="align-items: baseline" >
+      
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="sp">
+        <mat-icon matBadge="15" matBadgeColor="warn" style="float: right;" > home</mat-icon>
+        <span class="cdk-visually-hidden">
+          Example with a home icon with overlaid badge showing the number 15
+        </span>
+      </span>
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

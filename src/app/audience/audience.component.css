@@ -1,0 +1,24 @@
+
+.wrapper{
+  width:75%;
+  display:block;
+  overflow:hidden;
+  margin:0 auto;
+  padding: 40px 40px;
+  background:#fff;
+  border-radius:2px;
+}
+
+canvas{
+  background:#fff;
+  
+}
+
+a{
+  margin-top:10px;
+  display: block;
+  text-decoration: none;
+  color: #80b6f4;
+  font-weight: bold;
+  text-align: center;
+}

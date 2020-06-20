@@ -1,0 +1,98 @@
+<!-- <div   *ngFor="let intern of  studentDetails "> -->
+    
+    <div class="ip" >
+        <img src="../../assets/icons/99xt.jpg">
+    <h1 mat-dialog-title >Intern Profile</h1>
+    </div>
+    
+    <mat-grid-list cols="2" rowHeight="2:1" >
+        <mat-grid-tile rowspan="2"> 
+            <div class="ip1">
+                <img [src]="data.img"/>
+            <br> {{data.name}}
+            <br>{{data.index}}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+           
+
+            <table>
+                <th><b> Personal Details</b></th>
+              
+                <tr>
+                    <td> Full Name:</td>
+                    <td>{{data.name}}</td>
+                   
+                </tr>
+                <tr>
+                    <td> Index:</td>
+                    <td>{{data.index}}</td>
+                   
+                </tr>
+                <tr>
+                    <td> Position:</td>
+                    <td>{{data.position}}</td>
+                   
+                </tr>
+                <tr>
+                    <td> University:</td>
+                    <td>{{data.university}}</td>
+                   
+                </tr>
+                
+                <tr>
+                    <td>  Contact-No:</td>
+                    <td>{{data.contactno}}</td>
+                   
+                </tr>
+                
+                <tr>
+                    <td> Adress:</td>
+                    <td>{{data.address}}</td>
+                   
+                </tr>
+              
+                   
+               
+                
+
+            </table>
+            
+           
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <table>
+                <th><b> Organization Details</b></th>
+                <tr>
+                    <td> Internship Duration:</td>
+                    <td>{{data.duration}}</td>
+                   
+                </tr>
+                <tr>
+                    <td> Projects:</td>
+                    <td>{{data.projects}}</td>
+                   
+                </tr>
+                <tr>
+                    <td>  <mat-icon color="primary">assignment</mat-icon></td>
+                    <td><a href> cv.pdf</a></td>
+                   
+                </tr>
+                <tr>
+                    <td>  <mat-icon color="primary">description</mat-icon></td>
+                    <td><a href> agreements.pdf</a></td>
+                   
+                </tr>
+                </table>
+          </mat-grid-tile>
+      
+      </mat-grid-list>
+   
+
+
+    
+       
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
+<!-- </div> -->

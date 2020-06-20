@@ -1,0 +1,41 @@
+
+
+
+<mat-grid-list cols="3" rowHeight="390px" gutterSize="20px">
+  <mat-grid-tile  *ngFor="let intern of  studentDetails " class="example-card">
+    <div class="cards"> 
+  
+
+
+      <mat-card   >
+          <mat-card-header>
+            
+              
+            <div mat-card-avatar ><mat-icon color="primary">grade</mat-icon></div>
+            <mat-card-title>{{intern.name}}</mat-card-title>
+            <mat-card-subtitle>{{intern.index}}</mat-card-subtitle>
+           
+          </mat-card-header>
+          <div fxLayout="row">
+       <img [src]="intern.img" style="height: 220px; width: 240px;">
+          <mat-card-content style="margin-left: 50px;"> 
+            <p>
+            
+            {{intern.position}}
+             
+            </p>
+          </mat-card-content>
+          </div>
+          <mat-card-actions>
+            <button style="margin-left: 65px;margin-bottom: 15px;" class="button-boarder" mat-raised-button  (click)="openDialog(intern)">View Profile</button>
+      <br>
+          </mat-card-actions>
+        </mat-card>
+        </div>
+       
+
+  </mat-grid-tile>
+ 
+</mat-grid-list>
+
+ 
